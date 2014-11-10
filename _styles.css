@@ -74,10 +74,10 @@ ol.tree
 			text-decoration: none;
 			display: block;
 		}
-		li.file a[href *= '.pdf']	{ background: url(document.png) 0 0 no-repeat; }
-		li.file a[href *= '.html']	{ background: url(document.png) 0 0 no-repeat; }
-		li.file a[href $= '.css']	{ background: url(document.png) 0 0 no-repeat; }
-		li.file a[href $= '.js']		{ background: url(document.png) 0 0 no-repeat; }
+		li.file a[href *= '.asm.']	{ background: url(document.png) 0 0 no-repeat; color: #F13030; }
+		li.file a[href *= '.drw.']	{ background: url(document.png) 0 0 no-repeat; color: #000000; }
+		li.file a[href *= '.prt.']	{ background: url(document.png) 0 0 no-repeat; color: #0F9803;}
+		li.file a[href *= '.js']		{ background: url(document.png) 0 0 no-repeat; }
 	li input
 	{
 		position: absolute;

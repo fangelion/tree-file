@@ -8,17 +8,21 @@
 
 from os import listdir, sep#, walk
 from os.path import abspath, basename, isdir
-from sys import argv
+from sys import argv, platform
 
 # Имя файла со стилем
 css_style = "_styles.css"
 # та же папка для иконок
 icons_dir = "."
+if platform == "win32":
+    codepage = "CP-1251"
+else:
+    codepage = "UTF-8"
 site_template = {
     "head": """<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\"\
  \"http://www.w3.org/TR/html4/strict.dtd\">
 <html lang=\"ru-RU\"><head><meta http-equiv=\"Content-Type\"\
- content=\"text/html;charset=utf-8\"><!--[if gte IE 9 ]>\
+ content=\"text/html;charset=""" + codepage + """\"><!--[if gte IE 9 ]>\
  <link rel=\"stylesheet\" type=\"text/css\" href=\"_styles.css\"\
   media=\"screen\"><![endif]-->
 <!--[if !IE]>--><link rel=\"stylesheet\" type=\"text/css\"\

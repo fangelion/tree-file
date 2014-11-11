@@ -72,7 +72,7 @@ ol.tree
 			color: #fff;
 			padding-left: 21px;
 			text-decoration: none;
-			display: block;
+			display: inline;
 		}
 		li.file a[href *= '.asm.']	{ background: url(document.png) 0 0 no-repeat; color: #F13030; }
 		li.file a[href *= '.drw.']	{ background: url(document.png) 0 0 no-repeat; color: #000000; }

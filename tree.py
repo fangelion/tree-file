@@ -77,7 +77,7 @@ def tree(dir):
     data += site_template["dir_end"]
 
 
-def start(dir):
+def start(dir, dpath=""):
     global data
     data += site_template["head"]
     data += site_template["title_begin"] + dir + site_template["title_end"]
@@ -85,7 +85,7 @@ def start(dir):
     #dwalk = walk(dir)
     tree(dir)
     data += site_template["end"]
-    with open("index.html", "w") as site_file:
+    with open(dpath + sep + "index.html", "w") as site_file:
         site_file.write(data)
 
 
@@ -107,11 +107,11 @@ def main():
             start(abspath(path))
         else:
             print('ERROR: \'' + path + '\' is not a directory')
-    elif len(argv) == 3 and argv[1] == '-f':
+    elif len(argv) == 3:
         # print directories and files
-        path = argv[2]
+        path = argv[1]
         if isdir(path):
-            start(abspath(path))
+            start(abspath(path), argv[2])
         else:
             print('ERROR: \'' + path + '\' is not a directory')
     else:
